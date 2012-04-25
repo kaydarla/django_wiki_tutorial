@@ -13,7 +13,7 @@ def view_page(request, page_name):
     
     content = page.contents
     return render_to_response("view.html", { "pagename": page_name, 
-                                             "content": markdown.markdown(content) })
+                                             "content": content })
 
 def edit_page(request, page_name):
     try:
