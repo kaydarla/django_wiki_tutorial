@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} {{ pagename }} - Editing {% endblock %}
+
+{% block content %}
+  <h3>Editing - {{ pagename }}</h3>
+  <form method="post" action="/wikicamp/{{ pagename }}/save/">
+    {% csrf_token %}
+    <textarea name="content" rows="20" cols="60">{{ content }}</textarea><br />
+    <input type="submit" value="Save Page">
+    </form>
+{% endblock %}

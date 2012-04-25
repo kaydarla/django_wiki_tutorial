@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} {{ pagename }} {% endblock %}
+
+{% block content %}
+    <h1>{{ pagename }}</h1>
+    {{ content }}
+    <hr />
+    <a href="/wikicamp/{{ pagename }}/edit/">Edit this page?</a>
+{% endblock %}
